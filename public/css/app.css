@@ -1,0 +1,26 @@
+.col-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.directional-button {
+    width: 100%;
+}
+
+.command-buttons {
+    width: 100%;
+}
+
+.social {
+    color: #fff;
+    font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music-icons {
+    font-size: 30px;
+}

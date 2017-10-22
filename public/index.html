@@ -1,0 +1,211 @@
+<html>
+<head>
+    <title>ConnorBot</title>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/social.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+
+<!-- Social Icons -->
+<ul id="social_side_links">
+    <li><a style="background-color: #3c5a96;" href="https://www.facebook.com/krisboxorg/" target="_blank"><i class="fa fa-facebook social" aria-hidden="true"></i></a></li>
+    <li><a style="background-color: #1dadeb;" href="https://twitter.com/krisboxorg" target="_blank"><i class="fa fa-twitter social" aria-hidden="true"></i></a></li>
+    <li><a style="background-color: #1178b3;" href="https://linkedin.com/kristopherclarkks" target="_blank"><i class="fa fa-linkedin social" aria-hidden="true"></i></a></li>
+</ul>
+
+<!-- The modal -->
+<div class="modal fade" id="musicModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modalLabel">Music</h4>
+            </div>
+            <div class="modal-body">
+                <div class="wrapper">
+                    <div class="row text-center">
+                        <div class="col-lg-4"><i class="fa fa-play music-icons" aria-hidden="true"></i></div>
+                        <div class="col-lg-4"><i class="fa fa-volume-off music-icons" aria-hidden="true"></i></div>
+                        <div class="col-lg-4"><i class="fa fa-volume-up music-icons" aria-hidden="true"></i></div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col-lg-4 col-center text-center">
+                            <div>
+                                <button type="button" class="btn btn-secondary"><i class="fa fa-play-circle"></i></button><button type="button" class="btn btn-secondary"><i class="fa fa-fast-backward"></i></button><br/>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-secondary"><i class="fa fa-stop-circle"></i></button><button type="button" class="btn btn-secondary"><i class="fa fa-fast-forward"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-center"><button type="button" class="btn btn-secondary">Mute</button></div>
+                        <div class="col-lg-4"><input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="100" data-slider-step="1" data-slider-value="20" data-slider-orientation="vertical"/></div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col-lg-4"><div id="lblStartStop">Start/Stop</div></div>
+                        <div class="col-lg-4"><div id="lblMute">Off</div></div>
+                        <div class="col-lg-4"><div id="lblMusicVolume"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="talkModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="talkModalLabel">Talk</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="email" class="form-control" id="textToSpeak" aria-describedby="emailHelp" placeholder="Enter text to speak">
+                    </div>
+                </div>
+                <br/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnSayIt">Say it!</button><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="jokeModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="jokeLabel">Joke</h4>
+            </div>
+            <div class="modal-body">
+                A type of open-toed sandal.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="secretModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="secretLabel">Secret</h4>
+            </div>
+            <div class="modal-body">
+                A type of open-toed sandal.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="collapse bg-inverse" id="navbarHeader">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 py-4">
+                <h4 class="text-white">About</h4>
+                <p class="text-muted">ConnorBot is a four wheeled robot that my son Connor and I came up with when thinking of projects.  All of the hardware except the soldering was put together by him.  The software we thought up by Connor and coded by me.</p>
+            </div>
+            <div class="col-sm-4 py-4">
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse bg-inverse">
+    <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand">ConnorBot</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<div class="album text-muted">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"><button type="button" class="btn btn-secondary command-buttons" data-toggle="modal" data-target="#musicModal">Music</button></div>
+            <div class="col-md-3"><button type="button" class="btn btn-secondary command-buttons" data-toggle="modal" data-target="#talkModal">Talk</button></div>
+            <div class="col-md-3"><button type="button" class="btn btn-secondary command-buttons" id="btnJoke">Tell Joke</button></div>
+            <div class="col-md-3"><button type="button" class="btn btn-secondary command-buttons" id="btnSecret">Tell Secret</button></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <br/>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="card">
+            </div>
+            <div class="card text-center">
+                <a href="#" class="btn btn-primary" id="btnMoveForward"><i class="fa fa-arrow-circle-up fa-lg"></i></a>
+            </div>
+            <div class="card">
+            </div>
+
+            <div class="card text-center col-center">
+                <a href="#" class="btn btn-primary directional-button" id="btnMoveLeft"><i class="fa fa-arrow-circle-left fa-lg"></i></a>
+            </div>
+            <div class="card">
+                <img src="img/camera.png" style="height: 175px;">
+            </div>
+            <div class="card text-center col-center">
+                <a href="#" class="btn btn-primary directional-button" id="btnMoveRight"><i class="fa fa-arrow-circle-right fa-lg"></i></a>
+            </div>
+
+            <div class="card">
+            </div>
+            <div class="card text-center">
+                <a href="#" class="btn btn-primary" id="btnMoveBackward"><i class="fa fa-arrow-circle-down fa-lg"></i></a>
+            </div>
+            <div class="card">
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>ConnorBot &copy; Kristopher Clark 2017, but please download and customize it for yourself!</p>.</p>
+    </div>
+</footer>
+</body>
+</html>

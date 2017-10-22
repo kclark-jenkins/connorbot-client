@@ -1,0 +1,89 @@
+{
+  "allJokes": [
+    {
+      "type": "knock knock",
+      "joke": [
+        "Knock, knock",
+        "Who's there?",
+        "Noah",
+        "Noah who?",
+        "Noah good place to get something to eat?"
+      ]
+    },
+    {
+      "type": "knock knock",
+      "joke": [
+        "Knock, knock",
+        "Who's there?",
+        "Luke",
+        "Luke who?",
+        "Luke through the peep hole and you'll see."
+      ]
+    },
+    {
+      "type": "knock knock",
+      "joke": [
+        "Knock, knock",
+        "Who's there?",
+        "Sadie",
+        "Sadie who?",
+        "Sadie magic word and I'll disappear."
+      ]
+    },
+    {
+      "type": "knock knock",
+      "joke": [
+        "Knock, knock",
+        "Who's there?",
+        "Justin",
+        "Justin who?",
+        "Justin time for dinner!"
+      ]
+    },
+    {
+      "type": "knock knock",
+      "joke": [
+        "Knock, knock",
+        "Who's there?",
+        "Claire",
+        "Claire who?",
+        "Claire the way -- I'm coming through!"
+      ]
+    },
+    {
+      "type": "qa",
+      "joke": [
+        "What creature is smarter than a talking parrot?",
+        "A spelling bee."
+      ]
+    },
+    {
+      "type": "qa",
+      "joke": [
+        "Where do cows go for entertainment?",
+        "The mooooo-vies!"
+      ]
+    },
+    {
+      "type": "qa",
+      "joke": [
+        "What kind of dinosaur loves to sleep?",
+        "A stega-snore-us."
+      ]
+    },
+    {
+      "type": "qa",
+      "joke": [
+        "Why couldn't the pony sing?",
+        "Because she was a little hoarse."
+      ]
+    },
+    {
+      "type": "qa",
+      "joke": [
+        "Where do sheep go to get their hair cut?",
+        "The baa-baa shop."
+      ]
+    }
+  ]
+}
